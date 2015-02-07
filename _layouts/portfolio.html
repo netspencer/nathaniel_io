@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<section class="portfolio {{page.title | slugify}}">
+    <header class="animated bounceInDown">
+        <div class="flag-image">
+            <img src="/assets/projects/{{page.title | slugify}}/{{page.flag_image}}" alt="project-logo" />
+        </div>
+        <h1>{{ page.title }}</h1>
+        <h2>{{ page.subtitle }}</h2>
+    </header>
+    <section class="container">
+        {{content}}
+    </section>
+</section>

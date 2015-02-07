@@ -1,0 +1,10 @@
+// Import grid settings :
+@import 'grid-settings';
+
+// Generate classes :
+@include gridle_generate_classes();
+
+// generate a center custom class for all the states :
+@include gridle_generate_custom_class( ('center','%-','%state') ) {
+	text-align:center;
+}
