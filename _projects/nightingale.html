@@ -14,13 +14,13 @@ rows:
         
         Nightingale presents a unique challenge in that the target users are behavioral therapists, staff, and clinical directors (and not college students). So the design process involves learning a lot about those users and their use cases. It is also my first foray into healthcare tech, which has it’s own design and product constraints.
     - size: 7
-      type: image-center
+      type: image
       image: blackboard.png
     options:
       - vertical-align-middle
   - blocks: 
     - size: 12
-      type: image-center
+      type: image
       options:
         - caption-centered
       image: poster.png
@@ -38,7 +38,7 @@ rows:
         # Navigation
   - blocks:
     - size: 5
-      type: image-center
+      type: image
       image: navigation-blur.png
     - size: 7
       type: text-block
@@ -60,7 +60,7 @@ rows:
         ## I wanted the users to be able to find the specific client, staff, or location they logged on to find as quickly as possible.
   - blocks: 
     - size: 12
-      type: image-center
+      type: image
       image: browser.png
   - blocks:
     - size: 5
@@ -95,7 +95,7 @@ rows:
         
         This is what the old behavioral journal looked like. It showed show a client’s therapy data ((that’s been collected through the Nightingale mobile app) in a very stark and blank manner that was hard to quickly interpret.
     - size: 8
-      type: image-center
+      type: image
       image: data-viz.png
     options:
       - vertical-align-middle
@@ -123,7 +123,7 @@ rows:
 
         These are a few of some early explorations I did experimenting with showing the therapy progress towards goals. Originally I wanted something very clean and simple.
     - size: 12
-      type: image-center
+      type: image
       image: exploration.png
   - blocks:
     - size: 10
@@ -135,22 +135,31 @@ rows:
         ## I designed the journal with a focus on goals and scannability.
   - blocks: 
     - size: 12
-      type: image-center
+      type: image
+      options: caption-top
       image: behavioral-journal.png
       caption: |
-        Daily View
+        Daily view
   - blocks: 
     - size: 12
-      type: image-center
+      type: image
+      options: 
+        - caption-overlay-top
+        - caption-centered
       image: weekly-view.png
       caption: |
-        Weekly view
+        ## Weekly view
+        {: .shift-left .half}
   - blocks: 
     - size: 12
-      type: image-center
+      type: image
+      options: 
+        - caption-overlay-top
+        - caption-centered      
       image: monthly-view.png
       caption: |
-        Monthly view
+        ## Monthly view
+        {: .shift-left .shift-half}
   - blocks:
     - size: 10
       type: text-block
@@ -170,7 +179,7 @@ rows:
 
         Nightingale therapists need a quick way to visually display thier client’s progress over time. They use graphs to do so because graphs are easily interpreted by parents, staff, and directors. Below are a few early mockups I did for the Nightingale graph-making tool.
     - size: 12
-      type: image-center
+      type: image
       image: graphing-mockups.png
   - blocks:
     - size: 5
@@ -197,7 +206,7 @@ rows:
         ## I designed the final version with these two criteria on mind, while making an effort to keep the interface clean and intuitive.
   - blocks: 
     - size: 12
-      type: image-center
+      type: image
       image: graphing-tools.png
   - blocks:
     - size: 10
@@ -209,7 +218,8 @@ rows:
         ## It payed off. A few days after the graphing tool went live, Nightingale started receiving emails like this.
   - blocks: 
     - size: 12
-      type: image-center
+      type: image
+      options: image-full
       image: email.png
     options:
       - no-gutter

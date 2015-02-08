@@ -1,0 +1,6 @@
+<div class="grid-{{block.size}} image {{block.options | join: " "}}">
+    <img src="/assets/projects/{{page.title | slugify}}/{{block.image}}" />
+    {% if block.caption %}
+    <div class="caption">{{block.caption | markdownify}}</div>
+    {% endif %}
+</div>

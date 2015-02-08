@@ -66,6 +66,30 @@ section.portfolio {
         }
     }
 
+    h1 {
+        font-weight: 300;
+        font-size: 42px;
+        line-height: 58px;
+        margin-bottom: 12px;
+    }
+
+    h2 {
+        font-size: 24px;
+        line-height: 33px;
+        margin-bottom: 12px;
+    }
+
+    h3 {
+        font-weight: 600;
+        margin-bottom: 12px;
+    }
+
+    h4 {
+        font-size: 22px;
+        line-height: 30px;
+        margin-bottom: 24px;
+    }    
+
     p {
         margin-bottom: 24px;
 
@@ -75,12 +99,39 @@ section.portfolio {
     }
 
     .pos-absolute {
+        z-index: 50;
         position: absolute;
     }
 
-    .image-center {
-        text-align: center;
+    img[alt='icon'] {
+        width: 70px;
+        margin-bottom: 8px;
+    }
+
+    .shift {
+        &-left {
+            margin-left: -70px;
+            &.half {
+                margin-left: -35px;
+            }
+        }
+        &-right {
+            margin-left: 70px;
+            &.half {
+                margin-left: 35px;
+            }
+        }
+    }
+
+    .image {
+        position: relative;
+        &.image-full {
+            margin-left: -25px;
+            width: 960px;
+        }
         img {
+            display: block;
+            margin: auto;
             max-width: 100%;
         }
         .caption {
@@ -88,19 +139,30 @@ section.portfolio {
             margin-top: 10px;
             text-align: left;
             width: 70%;
-
-            .caption-centered & {
-                text-align: center;
+        }
+        &.caption-centered .caption {
+            width: 100%;
+            text-align: center !important;
+        }
+        &.caption-full-width .caption {
+            width: 100%;
+        }
+        &.caption-top {
+            display:table;
+            img {
+                display:table-footer-group;
+            }
+            .caption {
+                display:table-header-group;
+                margin-top: 0;
+                line-height: 2;
             }
         }
-    }
-
-    .image-full {
-        width: 960px;
-        margin-left: -25px;
-        line-height: 0;
-        img {
-            width: 100%;
+        &.caption-overlay-top {
+            .caption {
+                top: -20px;
+                position: absolute;
+            }
         }
     }
 
@@ -114,35 +176,6 @@ section.portfolio {
 
         &.text-center {
             text-align: center;
-        }
-
-        img[alt='icon'] {
-            width: 70px;
-            margin-bottom: 8px;
-        }
-
-        h1 {
-            font-weight: 300;
-            font-size: 42px;
-            line-height: 58px;
-            margin-bottom: 12px;
-        }
-
-        h2 {
-            font-size: 24px;
-            line-height: 33px;
-            margin-bottom: 12px;
-        }
-
-        h3 {
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-
-        h4 {
-            font-size: 22px;
-            line-height: 30px;
-            margin-bottom: 24px;
         }
     }
 }
