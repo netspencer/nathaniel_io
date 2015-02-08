@@ -1,11 +1,16 @@
 # Site settings
 title: Nathaniel Hajian
 email: nathanielhajian@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
+description: > # tåhis means to ignore newlines until "baseurl:"
   I am just out here in the world trying to make apps.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://nathaniel.io" # the base hostname & protocol for your site
-twitter_username: NateChaseH
 
 # Build settings
 markdown: kramdown
+
+# Content settings
+collections:
+    projects:
+        output: true
+        permalink: /projects/:path/

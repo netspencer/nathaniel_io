@@ -18,8 +18,8 @@ main {
 section.portfolio {
     header {
         width: 860px;
+        padding: 60px 50px;
         margin: 0 auto;
-        padding-bottom: 60px;
         border-bottom: 1px #979797 solid;
         font-family: Helvetica, sans-serif;
         font-weight: 100;
@@ -40,7 +40,7 @@ section.portfolio {
 
     &.spare {
         header .flag-image img {
-            margin-top: 113px;
+            margin-top: 53px;
             margin-bottom: 113px;
         }
     }
@@ -52,7 +52,7 @@ section.portfolio {
         .row {
             margin-bottom: 60px;
 
-            &:last-of-type {
+            &.no-gutter {
                 margin-bottom: 0;
             }
         }
@@ -60,9 +60,22 @@ section.portfolio {
 
     .image-center {
         text-align: center;
-        line-height: 0;
         img {
             max-width: 100%;
+        }
+        .caption {
+            line-height: 22px;
+            margin-top: 10px;
+            text-align: left;
+            width: 70%;
+        }
+    }
+
+    .image-full {
+        text-align: center;
+        line-height: 0;
+        img {
+            width: 100%;
         }
     }
 
@@ -88,9 +101,11 @@ section.portfolio {
         }
     }
 
-    h3.pull-quote {
-        font-size: 24px;
-        line-height: 33px;
-        text-align: center;
+    .pull-quote {
+        h3 {
+            font-size: 24px;
+            line-height: 33px;
+            text-align: center;
+        }
     }
 }

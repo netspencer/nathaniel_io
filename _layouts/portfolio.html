@@ -4,12 +4,20 @@ layout: default
 <section class="portfolio {{page.title | slugify}}">
     <header class="animated bounceInDown">
         <div class="flag-image">
+            {% if page.flag-image %}
             <img src="/assets/projects/{{page.title | slugify}}/{{page.flag_image}}" alt="project-logo" />
+            {% endif %}
         </div>
         <h1>{{ page.title }}</h1>
         <h2>{{ page.subtitle }}</h2>
     </header>
-    <section class="container">
-        {{content}}
+    <section class="container animated fadeInUp">
+        {% for row in page.rows %}
+            <div class="parent grid-12 row clear {{row.options | join: " "}}">
+                {% for block in row.blocks %}
+                    {% include portfolio_grid/{{block.type}}.html %}
+                {% endfor %}
+            </div>
+        {% endfor %}
     </section>
 </section>
