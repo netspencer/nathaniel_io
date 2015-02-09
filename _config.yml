@@ -40,7 +40,7 @@ prose:
           label: "Tagling"
           value: ""
       - name: "rows"
-        field:
-          element: "textarea"
-          label: "rows"
-          value: ""
+          field:
+            element: "textarea"
+            label: "rows"
+            value: ""
