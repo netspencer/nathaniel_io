@@ -1,6 +1,14 @@
 ---
 layout: default
 ---
+<nav class="top-nav">
+    <button class="left">
+        <a href="/">home</a>
+    </button>
+    <button class="right">
+        <a href="mailto:nathanielhajian@gmail.com">nathanielhajian@gmail.com</a>
+    </button>
+</nav>
 <section class="{{page.url | slugify | prepend: 'page-' }}">
     <header class="animated bounceInDown">
         <div class="flag-image">
@@ -12,4 +20,5 @@ layout: default
         <h2>{{ page.subtitle }}</h2>
     </header>
     {% include smart-grid.html %}
+    {{ content }}
 </section>

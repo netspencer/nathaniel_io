@@ -14,16 +14,15 @@ main {
     max-width: 910px;
     min-width: 910px;
     margin: 0 auto;
-    padding: 0 40px;
-
     overflow: hidden;
     position: relative;
 }
 
 header {
     width: 860px;
-    padding: 60px 0;
+    padding-bottom: 60px;
     margin: 0 auto;
+    margin-top: 70px;
     text-align: center;
     &:after {
         content: " ";
@@ -59,6 +58,72 @@ header {
     }
 }
 
+footer {
+    display: block;
+    width: 910px;
+    ul {
+        position: relative;
+        top: -36px;
+        float: right;
+        padding-right: 32px;
+        &:after {
+            content: " ";
+            clear: both;
+            display: block;
+        }
+        li {
+            margin-left: 30px;
+            display: inline-block;
+        }
+    }
+}
+
+nav.top-nav {
+    background: linear-gradient(0,
+                rgba(255,255,255,0),
+                rgba(255,255,255,1)
+            );
+    width: 910px;
+    position: fixed;
+    overflow: show;
+    z-index: 1000;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    button {
+        display: block;
+        font-size: 12px;
+        border: 1px $color-grey solid;
+        border-radius: 3px;
+        background: #FFF;
+        a {
+            display: block;
+            padding: 5px;
+            color: $color-grey;
+        }
+        &.left {
+            float: left;
+        }
+        &.right {
+            float: right;
+        }
+
+        @include hang();
+    }
+    &:after {
+        content: " ";
+        clear: both;
+        display: block;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $color-blue;
+    &:hover {
+        color: #4f7eca;
+    }
+}
+
 section.smart-grid {
     padding-top: 60px;
 
@@ -69,11 +134,12 @@ section.smart-grid {
         &.no-gutter {
             margin-bottom: 0;
         }
-    }
 
-    a {
-        text-decoration: none;
-        color: $color-blue;
+        &.seperators {
+            padding: 60px 0;
+            border-top: 1px solid #D8D8D8;
+            border-bottom: 1px solid #D8D8D8;
+        }
     }
 
     h1 {
@@ -108,6 +174,15 @@ section.smart-grid {
     .pos-absolute {
         z-index: 50;
         position: absolute;
+    }
+
+    .padding {
+        &-left {
+            padding-left: 30px;
+        }
+        &-right {
+            padding-right: 30px;
+        }
     }
 
     img[alt='icon'] {
@@ -220,24 +295,28 @@ section.smart-grid {
                 font-weight: bold;
                 text-transform: uppercase;
 
+                @include prefixed(transition-property, transform);
+                @include prefixed(transition-duration, $slowDuration);
+                @include hacks();
+
                 h2 {
                     font-size: 16px;
                     margin-bottom: 2px;
                 }
 
                 h3 {
-                    display: none;
+                    @include prefixed(transition-property, visibility);
+                    @include prefixed(transition-duration, $fastDuration);
+                    @include hacks();
+
+                    visibility: hidden;
                     font-size: 12px;
                 }
-
-                @include hacks();
-                @include prefixed(transition-duration, $mediumDuration);
-                @include prefixed(transition-property, transform);
             }
 
             img {
                 @include hacks();
-                @include prefixed(transition-duration, $mediumDuration);
+                @include prefixed(transition-duration, $slowDuration);
                 @include prefixed(transition-property, transform);
             }
 
@@ -247,13 +326,12 @@ section.smart-grid {
                     opacity: 0.7;
                 }
                 div.text {
-                    margin-top: -28px;
-                    @include prefixed(transition-timing-function, cubic-bezier(.47,2.02,.31,-0.36));
+                    margin-top: -24px;
                     h2 {
 
                     }
                     h3 {
-                        display: block;
+                        visibility: visible;
                     }
                 }
             }
