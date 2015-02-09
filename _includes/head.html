@@ -16,19 +16,19 @@
     <script type="text/javascript" src="{{ "js/hook.min.js" | prepend: site.baseurl }}"></script>
     <script type="text/javascript"  src="{{ "js/wow.js" | prepend: site.baseurl }}"></script>
     <script type="text/javascript">
-        Turbolinks.enableTransitionCache();
+        // Turbolinks.enableTransitionCache();
         var wow = new WOW({offset:100});
         $(document).on("page:load", function() {
             jQuery.ready();
         });
-        $(function() {
-             $('#hook').hook({
-                reloadPage: false,
-                reloadEl: function() {
-                    Turbolinks.visit('/');
-                }
-            });           
-        });
+        // $(function() {
+        //      $('#hook').hook({
+        //         reloadPage: false,
+        //         reloadEl: function() {
+        //             Turbolinks.visit('/');
+        //         }
+        //     });           
+        // });
         wow.init();
     </script>
 </head>
