@@ -39,3 +39,8 @@ prose:
           element: "text"
           label: "Tagling"
           value: ""
+      - name: "rows"
+        field:
+          element: "textarea"
+          label: "rows"
+          value: ""
