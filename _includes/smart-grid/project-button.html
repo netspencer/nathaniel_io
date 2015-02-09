@@ -1,9 +1,9 @@
 <div class="grid-{{block.size}} project-button {{block.options | join: " "}}">
-    <a class="fill" href="{{block.slug | prepend: 'projects/' | prepend: site.baseurl | prepend: '/'}}" rel="project">
+    <a class="fill" href="{{block.slug | prepend: 'projects/' | prepend: site.baseurl}}" rel="project">
         <div class="text">
             <h2>{{block.name}}</h2>
             <h3>{{block.tagline}}</h3>
         </div>
-        <img src="{{block.slug | prepend: 'assets/index/' | prepend: site.baseurl | append: '-bg.png' | prepend: '/'}}" alt="bg" />
+        <img src="{{block.slug | prepend: 'assets/index/' | prepend: site.baseurl | append: '-bg.png'}}" />
     </a>
 </div>

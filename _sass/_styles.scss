@@ -9,6 +9,17 @@ body {
     color: $color-grey;
 }
 
+// .hook {
+//     display: none;
+//     height: 85px;
+//     clear: both;
+//     position: relative;
+//     z-index: 9999;
+//     width: 100%;
+//     overflow: hidden;
+//     text-align: center;
+// }
+
 main {
     min-height: 100vh;
     max-width: 910px;
@@ -91,6 +102,7 @@ nav.top-nav {
     padding-bottom: 30px;
     button {
         display: block;
+        opacity: 0.7;
         font-size: 12px;
         border: 1px $color-grey solid;
         border-radius: 3px;
@@ -106,7 +118,9 @@ nav.top-nav {
         &.right {
             float: right;
         }
-
+        &:hover {
+            opacity: 1;
+        }
         @include hang();
     }
     &:after {

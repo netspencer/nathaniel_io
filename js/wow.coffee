@@ -94,6 +94,7 @@ class @WOW
       @start()
     else
       @util().addEvent document, 'DOMContentLoaded', @start
+      @util().addEvent document, 'page:load', @start
     @finished = []
 
   start: =>
@@ -108,6 +109,7 @@ class @WOW
     if !@disabled()
       @util().addEvent window, 'scroll', @scrollHandler
       @util().addEvent window, 'resize', @scrollHandler
+      @util().addEvent document, 'page:load', @scrollHandler
       @interval = setInterval @scrollCallback, 50
     if @config.live
       new MutationObserver (records) =>
@@ -122,6 +124,7 @@ class @WOW
     @stopped = true
     @util().removeEvent window, 'scroll', @scrollHandler
     @util().removeEvent window, 'resize', @scrollHandler
+    @util().removeEvent document, 'page:load', @scrollHandler
     clearInterval @interval if @interval?
 
   sync: (element) ->
