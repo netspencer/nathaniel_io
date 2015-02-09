@@ -1,0 +1,9 @@
+<section class="smart-grid">
+    {% for row in page.rows %}
+        <div class="wow fadeInUp parent grid-12 row clear {{row.options | join: " "}}">
+            {% for block in row.blocks %}
+                {% include smart-grid/{{block.type}}.html %}
+            {% endfor %}
+        </div>
+    {% endfor %}
+</section>

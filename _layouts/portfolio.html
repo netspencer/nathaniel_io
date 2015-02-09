@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<section class="portfolio {{page.title | slugify}}">
+<section class="{{page.url | slugify | prepend: 'page-' }}">
     <header class="animated bounceInDown">
         <div class="flag-image">
             {% if page.flag_image %}
@@ -11,13 +11,5 @@ layout: default
         <h1>{{ page.title }}</h1>
         <h2>{{ page.subtitle }}</h2>
     </header>
-    <section class="container">
-        {% for row in page.rows %}
-            <div class="wow fadeInUp parent grid-12 row clear {{row.options | join: " "}}">
-                {% for block in row.blocks %}
-                    {% include portfolio_grid/{{block.type}}.html %}
-                {% endfor %}
-            </div>
-        {% endfor %}
-    </section>
+    {% include smart-grid.html %}
 </section>
