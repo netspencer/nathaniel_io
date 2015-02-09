@@ -154,6 +154,11 @@ section.smart-grid {
             border-top: 1px solid #D8D8D8;
             border-bottom: 1px solid #D8D8D8;
         }
+
+        &.button-grid {
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+        }
     }
 
     h1 {
@@ -283,6 +288,9 @@ section.smart-grid {
     }
 
     .project-button {
+        // override grid
+        padding-left: 10px !important;
+        padding-right: 10px !important;
         a.fill {
             background: #000;
             overflow: hidden;
