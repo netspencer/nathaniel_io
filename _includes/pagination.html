@@ -1,0 +1,10 @@
+{% if page.previous_project %}
+<div id="page_left" class="pagination pagination-left">
+    <a href="{{page.previous_project | prepend: 'projects/' | prepend: site.baseurl}}"><div class="icon"></div></a>
+</div>
+{% endif %}
+{% if page.next_project %}
+<div id="page_right" class="pagination pagination-right">
+    <a href="{{page.next_project | prepend: 'projects/' | prepend: site.baseurl }}"><div class="icon"></div></a>
+</div>
+{% endif %}

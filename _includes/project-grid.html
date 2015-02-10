@@ -1,0 +1,5 @@
+<div class="wow fadeInUp parent grid-12 row clear button-grid">
+    {% for block in site.data.projects.blocks %}
+        {% include smart-grid/{{block.type}}.html %}
+    {% endfor %}
+</div>

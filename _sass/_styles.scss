@@ -9,21 +9,65 @@ body {
     color: $color-grey;
 }
 
-// .hook {
-//     display: none;
-//     height: 85px;
-//     clear: both;
-//     position: relative;
-//     z-index: 9999;
-//     width: 100%;
-//     overflow: hidden;
-//     text-align: center;
-// }
+div.pagination {
+    z-index: 0;
+    position: fixed;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    &-left {
+        left: 0;
+        float: left;
+
+        a {
+            float: left;
+        }
+    }
+
+    &-right {
+        right: 0;
+        float: right;
+
+        a {
+            float: right;
+            @include prefixed(transform, rotate(180deg));
+        }
+    }
+
+    &:hover {
+        .icon {
+            background-color: #F8F8F8;
+        }
+    }
+
+    a {
+        display: inline-block;
+        padding: 50px;
+        position: relative;
+        top: 50%;
+        margin-top: -75px;
+
+    }
+
+    .icon {
+        background-repeat: no-repeat;
+        background-position: 17px 14px;
+        background-image: url("/assets/caret.png");
+        height: 50px;
+        width: 50px;
+        border-radius: 25px;
+
+        &:hover {
+            background-color: #EEE;
+        }
+    }
+}
 
 main {
+    z-index: 1;
+    background: #FFF;
     min-height: 100vh;
-    max-width: 910px;
-    min-width: 910px;
+    width: 910px;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
@@ -33,7 +77,7 @@ header {
     width: 860px;
     padding-bottom: 60px;
     margin: 0 auto;
-    margin-top: 70px;
+    margin-top: 120px;
     text-align: center;
     &:after {
         content: " ";
@@ -89,17 +133,38 @@ footer {
     }
 }
 
+nav.project-switcher {
+    section.smart-grid {
+        width: 910px;
+        margin: 0 auto;
+        margin-top: 150px;
+        margin-bottom: 300px;
+        &:before {
+            content: " ";
+            width: 150px;
+            height: 1px;
+            background: #BCBCBC;
+            margin: 0 auto;
+            display: block;
+            position: relative;
+            margin-bottom: 150px;
+        }
+    }
+}
+
 nav.top-nav {
-    background: linear-gradient(0,
-                rgba(255,255,255,0),
-                rgba(255,255,255,1)
-            );
+    // background: linear-gradient(0,
+    //             rgba(255,255,255,0),
+    //             rgba(255,255,255,1)
+    //         );
+    background: #FFF;
+    border-bottom: 1px #999 solid;
     width: 910px;
     position: fixed;
     overflow: show;
     z-index: 1000;
     padding-top: 20px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     button {
         display: block;
         opacity: 0.7;

@@ -12,11 +12,8 @@
 
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="{{ "js/turbolinks.js" | prepend: site.baseurl }}"></script>
-    <script type="text/javascript" src="{{ "js/mousewheel.js" | prepend: site.baseurl }}"></script>
-    <script type="text/javascript" src="{{ "js/hook.min.js" | prepend: site.baseurl }}"></script>
     <script type="text/javascript"  src="{{ "js/wow.js" | prepend: site.baseurl }}"></script>
     <script type="text/javascript">
-        // Turbolinks.enableTransitionCache();
         var wow = new WOW({offset:100});
         $(document).on("page:load", function() {
             jQuery.ready();

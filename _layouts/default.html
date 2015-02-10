@@ -5,5 +5,9 @@
         <main id="page">
             {{ content }}
         </main>
+        {% include pagination.html %}
+        {% unless page.hide_footer %}
+        {% include project-switcher.html %}
+        {% endunless %}
     </body>
 </html>
