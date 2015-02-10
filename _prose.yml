@@ -1,5 +1,5 @@
 prose: 
-  rooturl: "_projects"
+  # rooturl: "_projects"
   media: "assets/projects"
   metadata:
     _projects:

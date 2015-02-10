@@ -3,6 +3,6 @@
         <a href="/">{{site.data.profile.name}}</a>
     </button>
     <button class="right">
-        <a href="mailto:nathanielhajian@gmail.com">nathanielhajian@gmail.com</a>
+        <a href="{{site.data.profile.email | prepend: 'mailto:'}}">{{site.data.profile.email}}</a>
     </button>
 </nav>

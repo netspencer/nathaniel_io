@@ -1,7 +1,9 @@
 <footer class="site-footer wow fadeInUp">
     <ul>
-        <li><a href="#">twitter</a></li>
-        <li><a href="#">dribble</a></li>
-        <li><a href="#">soundcloud</a></li>
+        {% for social_hash in site.data.profile.social %}
+            {% for social in social_hash %}
+                <li><a href="{{social[1]}}">{{social[0]}}</a></li>
+            {% endfor %}
+        {% endfor %}
     </ul>
 </footer>

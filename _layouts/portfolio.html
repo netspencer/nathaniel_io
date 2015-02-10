@@ -2,9 +2,6 @@
 layout: default
 ---
 {% include top-grid.html %}
-{% if page.type != 'home' %}
-<div class="hook" id="hook"></div>
-{% endif %}
 <section class="{{page.url | slugify | prepend: 'page-' }}">
     <header class="animated bounceInDown">
         <div class="flag-image">
@@ -13,7 +10,7 @@ layout: default
             {% endif %}
         </div>
         <h1>{{ page.title }}</h1>
-        <h2>{{ page.subtitle }}</h2>
+        <h2>{{ page.subtitle | markdownify }}</h2>
     </header>
     {% include smart-grid.html %}
     {{ content }}
