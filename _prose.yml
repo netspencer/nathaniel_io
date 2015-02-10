@@ -1,0 +1,19 @@
+prose: 
+  rooturl: "_projects"
+  media: "assets/projects"
+  metadata:
+    _projects:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "projects"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Project Name"
+          value: ""
+      - name: "subtitle"
+        field:
+          element: "text"
+          label: "Tagling"
+          value: ""
