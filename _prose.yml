@@ -1,6 +1,18 @@
 prose: 
   # rooturl: "_projects"
   media: "assets/projects"
+  ignore:
+    - "_includes"
+    - "_layouts"
+    - "_sass"
+    - "_site"
+    - "assets"
+    - "css"
+    - "js"
+    - ".gitignore"
+    - "_config.yml"
+    - "_prose.yml"
+    - "CNAME"
   metadata:
     _projects:
       - name: "layout"
