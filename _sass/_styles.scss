@@ -71,6 +71,10 @@ main {
     margin: 0 auto;
     overflow: hidden;
     position: relative;
+
+    @include gridle_state(mobile) {
+        padding: 0 20px;
+    }
 }
 
 header {
@@ -108,6 +112,10 @@ header {
             margin: auto;
             width: 50%;
             font-size: 16px;
+            
+            @include gridle_state(mobile) {
+                width: 100%;
+            }
         }
     }
 }
@@ -131,6 +139,9 @@ footer {
 }
 
 nav.project-switcher {
+    @include gridle_state(mobile) {
+        padding: 0 20px;
+    }
     section.smart-grid {
         width: 100%;
         margin: 0 auto;
@@ -156,14 +167,16 @@ nav.top-nav {
     //         );
     background: #FFF;
     border-bottom: 1px #999 solid;
-    width: 910px;
+    // min-width: 100vw;
+    width: 100%;
+    max-width: 910px;
     position: fixed;
     overflow: show;
     z-index: 1000;
     padding-top: 20px;
     padding-bottom: 20px;
     button {
-        margin: 0 25px;
+        margin: 0 20px;
         display: block;
         opacity: 0.7;
         font-size: 12px;
@@ -190,6 +203,11 @@ nav.top-nav {
         content: " ";
         clear: both;
         display: block;
+    }
+
+    @include gridle_state(mobile) {
+        margin: 0 -20px;
+        width: 100%;
     }
 }
 
@@ -421,5 +439,17 @@ section.smart-grid {
                 }
             }
         }
+    }
+}
+
+// |------------------------------------------------------
+// |------------------------------------------------------
+// | reset grid for mobile
+// |------------------------------------------------------
+// |------------------------------------------------------
+
+[class*="grid-"] {
+    @include gridle_state(mobile) {
+        width:100%;
     }
 }
