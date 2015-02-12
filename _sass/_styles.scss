@@ -15,6 +15,11 @@ div.pagination {
     height: 100%;
     width: 50%;
     top: 0;
+
+    @include gridle_state(mobile) {
+        display: none;
+    }
+
     &-left {
         left: 0;
         float: left;
@@ -91,6 +96,10 @@ header {
         display: block;
         top: 60px;
         position: relative;
+
+        @include gridle_state(mobile) {
+            width: 100%;
+        }
     }
     .flag-image {
         margin: 20px 0;
@@ -144,9 +153,16 @@ nav.project-switcher {
     }
     section.smart-grid {
         width: 100%;
+        max-width: 910px;
         margin: 0 auto;
         margin-top: 150px;
         margin-bottom: 300px;
+        @include gridle_state(mobile) {
+            width: 100%;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding: 0;
+        }
         &:before {
             content: " ";
             width: 150px;
@@ -156,6 +172,10 @@ nav.project-switcher {
             display: block;
             position: relative;
             margin-bottom: 150px;
+            @include gridle_state(mobile) {
+                width: 100%;
+                margin-bottom: 60px;
+            }
         }
     }
 }
@@ -240,6 +260,10 @@ section.smart-grid {
             padding-left: 15px !important;
             padding-right: 15px !important;
         }
+
+        @include gridle_state(mobile) {
+            margin-bottom: 0;
+        }
     }
 
     h1 {
@@ -274,6 +298,9 @@ section.smart-grid {
     .pos-absolute {
         z-index: 50;
         position: absolute;
+        @include gridle_state(mobile) {
+            position: static;
+        }
     }
 
     .padding {
@@ -310,6 +337,10 @@ section.smart-grid {
         &.full-width {
             margin-left: -25px;
             width: 960px;
+            @include gridle_state(mobile) {
+                margin-left: 0;
+                width: 100%;
+            }
         }
         .caption {
             margin-top: 10px;
@@ -370,8 +401,13 @@ section.smart-grid {
 
     .project-button {
         // override grid
-        padding-left: 10px !important;
-        padding-right: 10px !important;
+        padding-left: 10px;
+        padding-right: 10px;
+        @include gridle_state(mobile) {
+            padding-left: 0;
+            padding-right: 0;
+            margin-bottom: 20px;
+        }
         a.fill {
             background: #000;
             overflow: hidden;
@@ -451,5 +487,6 @@ section.smart-grid {
 [class*="grid-"] {
     @include gridle_state(mobile) {
         width:100%;
+        margin-bottom: 60px;
     }
 }
